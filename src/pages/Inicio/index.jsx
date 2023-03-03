@@ -1,24 +1,15 @@
 import styles from './Inicio.module.scss';
 import React from 'react'
-import useAuth from 'hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
-import Botao from 'components/Botao';
+import { Outlet } from 'react-router-dom';
+import Cabecalho from 'components/Cabecalho';
+import Rodape from 'components/Rodape';
 
 function Inicio() {
-
-    const { signout } = useAuth();
-    const navigate = useNavigate();
-
     return (
         <section>
-            <div>
-                <h1>ESTOQUE DA LOJA</h1>
-                <Botao
-                    Text="Sair" onClick={() => [signout(), navigate("/")]}
-                >
-                    Sair
-                </Botao>
-            </div>
+            <Cabecalho />
+            <Outlet />
+            <Rodape />
         </section>
     )
 }

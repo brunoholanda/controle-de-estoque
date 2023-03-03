@@ -5,6 +5,7 @@
     text-align: center;
     margin: 1em 8em;
     font-family: var(--fonte-principal);
+    padding-bottom: 5em;
 
     h1 {
         
@@ -12,10 +13,20 @@
     }
 
     button {
+        background-color: var(--roxo);
+        color: var(--branco);
+        font-family: var(--fonte-secundaria);
+        font-weight: 500;
         border: none;
         width: 300px;
         height: 45px;
         border-radius: 8px;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.5s ease;
     }
 }
 

@@ -3,7 +3,7 @@ import styles from './CampoTexto.module.scss';
 
 const CampoTexto = ({ type, placeholder, value, onChange }) => {
   return (
-    <div>
+    <div className={styles.campotexto}>
         <input
             value={value}
             onChange={onChange}

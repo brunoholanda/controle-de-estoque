@@ -5,9 +5,10 @@ import CampoTexto from 'components/CampoTexto';
 import Botao from 'components/Botao';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from 'hooks/useAuth';
+import Banner from 'components/Banner';
 
 const Login = () => {
-    const { signin  } = useAuth();
+    const { signin } = useAuth();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ const Login = () => {
             setError("Preencha todos os campos");
             return;
         }
-        
+
         const res = signin(email, senha);
 
         if (res) {
@@ -31,10 +32,10 @@ const Login = () => {
     };
 
     return (
-        <section className={styles.login}> 
-            <h1>LOGIN</h1>
+        <section className={styles.login}>
             <div className={styles.login__formulario}>
-                <label>Email*</label>
+            <h1>LOGIN</h1>
+                <p>Email*</p>
                 <CampoTexto
                     type="email"
                     placeholder="Digite seu E-mail"
@@ -42,7 +43,7 @@ const Login = () => {
                     onChange={(e) => [setEmail(e.target.value), setError("")]}
                     label="email"
                 />
-                <label>Senha*</label>
+                <p>Senha*</p>
                 <CampoTexto
                     type="password"
                     placeholder="Digite sua Senha"
@@ -51,13 +52,19 @@ const Login = () => {
                 />
                 <label>{error}</label>
                 <div className={styles.login__botao}>
-                <Botao 
-                    Text="Entrar" onClick={handleLogin}
-                />
+                    <Botao
+                        Text="Entrar" onClick={handleLogin}
+                    />
+
+                    <Link to="/cadastro">
+                        <Botao
+                            Text="Registrar"
+                        />
+                    </Link>
                 </div>
-                <Link to="/cadastro">
-                <p>Faca seu Registro</p>
-                </Link>
+            </div>
+            <div className={styles.login__banner}>
+                <Banner />
             </div>
         </section>
     )

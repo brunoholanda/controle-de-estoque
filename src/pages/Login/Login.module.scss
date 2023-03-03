@@ -1,25 +1,60 @@
 .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em 2em;
+    
 
     &__formulario {
 
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            margin: 0;
+        }
+
         input {
-            box-sizing: border-box;
-            width: 390px;
-            height: 60px;
-            align-items: center;
+            margin: 1em 0;
+        }
+
+        label {
+            color: red;
+        }
+    }
+
+    &__botao {
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        button {
             padding: 15px 10px;
             gap: 10px;
-            border: 1px solid var(--cinza-escuro);
-            border-radius: 5px;
-            background-color: var(--cinza-claro);
-        }
-
-        input::placeholder {
-            color: rgba(0, 0, 0, 0.68);
+            border: 1px solid #8F8F8F;
+            border-radius: 20px;
+            width: 395px;
+            height: 60px;
+            margin: 1em 0 .2em 0;
+            background-color: var(--preto);
+            color: var(--branco);
+            font-size: 15px;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
         }
 
+        button:hover {
+            transform: scale(1.03);
+            transition: 0.2s ease;
+        }
+    }
+
+    &__banner {
+
+        margin-left: 8em;
+        img {
+            width: 80%;
+        }
     }
 }

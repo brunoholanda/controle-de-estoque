@@ -1,0 +1,51 @@
+.cabecalho {
+    background-color: var(--cinza-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+
+    &__logo {
+        img {
+            width: 50px;
+        }
+    }
+
+    &__links {
+
+        a {
+            text-decoration: none;
+            color: var(--preto);
+            margin: 0 2em;
+            font-size: 25px;
+        }
+
+        a:hover {
+            color: var(--roxo);
+            font-weight: 500;
+        }
+    }
+
+    &__notificacao {
+
+        img {
+            margin-right: .8em;
+        }
+    }
+
+    button {
+        border: none;
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: var(--roxo);
+        color: var(--branco);
+    }
+
+    button:hover {
+        transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.5s ease;
+    }
+
+}

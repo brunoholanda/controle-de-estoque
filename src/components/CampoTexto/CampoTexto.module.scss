@@ -1,17 +1,22 @@
 .campotexto {
 
-    input {
-        border: 1px solid var(--cinza);
-        border-radius: 8px;
-        width: 307px;
-        height: 40px;
-    }
+        input {
+            box-sizing: border-box;
+            width: 390px;
+            height: 60px;
+            align-items: center;
+            padding: 15px 10px;
+            gap: 10px;
+            border: 1px solid var(--cinza-escuro);
+            border-radius: 5px;
+            background-color: var(--cinza-claro);
+        }
 
-    input::placeholder {
-        color: rgba(0, 0, 0, 0.5);
-        font-family: var(--fonte-principal);
-        font-weight: 300;
-        font-size: 14px;
-        padding-left: 1em;
+        input::placeholder {
+            color: rgba(0, 0, 0, 0.68);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
     }
-}

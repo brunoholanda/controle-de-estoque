@@ -5,6 +5,7 @@ import Inicio from "./pages/Inicio";
 import Cadastro from "./pages/Cadastro";
 import { Fragment } from "react";
 import useAuth from "hooks/useAuth";
+import PaginaDeErro from "pages/PaginaDeErro";
 
 const Private = ({Item}) => {
     const { signed } = useAuth();
@@ -18,7 +19,9 @@ function AppRoutes() {
             <ScrollToTop />
             <Fragment>
                 <Routes>
-                    <Route exact path="/inicio" element={<Private Item={Inicio} />} />
+                    <Route exact path="/inicio" element={<Private Item={Inicio} />}> 
+                        <Route path="*" element={<PaginaDeErro />} />
+                    </Route>
                     <Route path="/" element={<Login />} />
                     <Route path="/cadastro" element={<Cadastro />} />
                 </Routes>

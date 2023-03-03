@@ -1,10 +1,10 @@
 import styles from './Cadastro.module.scss';
-
 import React, { useState } from 'react'
 import CampoTexto from 'components/CampoTexto';
 import Botao from 'components/Botao';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from 'hooks/useAuth';
+import banner from '../../public/img/banner-cadastro.png';
 
 function Cadastro() {
 
@@ -38,8 +38,11 @@ function Cadastro() {
     };
 
     return (
-        <section>
-            <div>
+        <section className={styles.cadastro}>
+            <div className={styles.cadastro__banner}>
+                <img src={banner} alt="banner da tela de cadastro" />
+            </div>
+            <div className={styles.cadastro__formulario}>
                 <h1>SISTEMA DE CADASTRO</h1>
                 <CampoTexto
                     type="email"
@@ -63,9 +66,11 @@ function Cadastro() {
                 <Botao
                     Text="Cadastrar" onClick={handleSignup}
                 />
-                <label>Ja tem uma conta?</label>
+                <p>Ja tem uma conta?</p>
                 <Link to="/">
-                    <p>Entre</p>
+                <Botao
+                    Text="Entre"
+                />
                 </Link>
             </div>
         </section>

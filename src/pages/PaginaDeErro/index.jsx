@@ -13,7 +13,7 @@ function PaginaDeErro() {
             <div>
                 <h1>Ops... Pagina não encontrada... Clique em voltar!</h1>
                 <div onClick={() => navegar(-1)}>
-                    <Botao>VOLTAR</Botao>
+                    <button>VOLTAR</button>
                 </div>
             </div>
         </section>
